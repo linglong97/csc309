@@ -8,3 +8,17 @@ body {
     background-color: gray; 
     height: 80px;
 }
+
+#topNavBar {
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+#topNavBar ul {
+    padding: 5px;
+    margin: 0px;
+}
+#topNavBar ul li {
+    list-style: none;
+    display: inline;
+}
