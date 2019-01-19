@@ -1,3 +1,13 @@
 html and css notes
 csc309
 
+specificity preference css:
+id
+class
+elements, parents elements more specific than children
+
+same specificity: further down style sheet wins
+css box model: content padding border margin
+can only change height/width of block level elements
+
+elements after a floating element will flow around it, user clearfix to fix the problem.
