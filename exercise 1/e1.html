@@ -8,19 +8,27 @@
  </head>
 
  <body>
- 	
+	<img src = "uoft.jpg" id = "bigProfilePicCircle">
  	<!-- The header -->
  	<div id="header">
- 		<!-- Twitter logo goes in here -->
- 		<img class = "birdLogo" src = "bird.png"/>
+		 <!-- Twitter logo goes in here -->
+
+		<img class = "birdLogo" src = "bird.png"/>
+		<a href=""> Home </a>
+		<a href=""> Moments </a>
+		<a href=""> Notifications </a>
+		<a href=""> Messages </a>
+		 
+		 <input type="text" class = "tweetSearch" placeholder="Search..">
+		 <button class = "tweetButton">Tweet</button>
+
+
  	</div>
 
 	<!-- The big banner image -->
  	<div id="banner"> <!-- Just holds the banner image, don't need to style this div. -->
 		<img class = "bannerPic" src = "uoft_banner.jpeg"/>
  		<!-- Banner image goes in here -->
- 		
-
  	</div>
 
  	<div id="profileStats">
@@ -32,9 +40,10 @@
 			 <li>Likes<br><span class="profileStatsNumber">10.3k</span></li>
 
  			<!-- Add the rest of the stats below -->
+			 <button>Follow @UofT</button> 
 
-
- 		</ul>
+		</ul>
+		
  	</div>
 
  	<!-- The Profile Info Section -->
@@ -44,6 +53,17 @@
  		<p>
  			Connect with Canada's top university and one of the world’s strongest academic and research powerhouses. Find the latest news & events @uoftnews. #UofT
 		</p>
+		<button class = "profileInfoButton">Tweet to UofT</button>
+
+		<div class = "info">189 Photos and Videos</div>
+		<div class = "infoPhotos">
+			<img src = "extra/chitoge.jpeg">
+			<img src = "extra/onodera.jpeg">
+			<img src = "extra/rem.jpeg">
+			<img src = "extra/ram.jpeg">
+			<img src = "extra/taiga.jpeg">
+			<img src = "extra/emilia.jpeg">
+		</div>
  	</div>
 
 
@@ -56,7 +76,7 @@
 	 			<li><a href="">Tweets & Replies</a></li>
  			</ul>
  		</div>
-
+		 <div class = "scroll">
  		<!-- First tweet -->
  		<div class='tweet'>
  			<!-- Put the tweet icon and content in this div.
@@ -64,24 +84,82 @@
  			and one that has the content of the tweet.
  			Remember to look in the starter CSS for appropriate class names that 
  			match these descriptions. -->
+			<div class = "tweetIconContainer">
+				<img class = "tweetIcon" src = "uoft.jpg"/>
+			</div>
+			<div class = "tweetContent">
+				<strong> University of Toronto </strong> <span class = "grey">@UofT</span>
+				<br><br> Another great day at UofT! <span class = "hashtag">#UofT #GreatDay</span>
 
-
+			</div>
  		</div>
 
  		<!-- Second tweet -->
  		<div class='tweet'>
  			<!-- Reuse all of the tweet classes from the one above, 
  			and just change the content of the tweet. -->
-
+			 <div class = "tweetIconContainer">
+					<img class = "tweetIcon" src = "uoft.jpg"/>
+			</div>
+			<div class = "tweetContent">
+				<strong> University of Toronto </strong> <span class = "grey">@UofT</span>
+				<br><br> Check out some books at <span class = "hashtag">#Robarts</span>
+				<img src = "robarts.jpg" class = "tweetContentPicture">
+			</div>
 
  		</div>
 
 		<!-- Add your own tweet below -->
-
-
-
-
-
- 	</div>
+		<div class='tweet'>
+				<!-- Reuse all of the tweet classes from the one above, 
+				and just change the content of the tweet. -->
+			<div class = "tweetIconContainer">
+					<img class = "tweetIcon" src = "extra/chopper.jpeg"/>
+			</div>
+			<div class = "tweetContent">
+				<strong> Tony Tony Chopper   </strong> <span class = "grey">@DoctorChopper</span>
+				<br><br> Hanging out with the Straw Hat Crew! <span class = "hashtag">#OnePiece #NewWorld</span>
+				<img src = "extra/onepiece.jpg" class = "tweetContentPicture">
+			</div>
+		</div>
+	</div>
+	 </div>
+	 <div class = "extra">
+		 <div class = "extraBox">
+			<Strong> Recommended Follows </Strong>
+			<div class = "space"></div>
+			<div class = "whoToFollow">
+				<div class = "right">
+					<img class = "followImg" src = "extra/taiga.jpeg">
+				</div>
+				<div>
+					<Strong>Aisaka Taiga</Strong> @PalmTopTiger
+				</div>
+				<div class = "space"></div>
+				<button class = "followButton">Follow</button>
+			</div>
+			<div class = "whoToFollow">
+					<div class = "right">
+						<img class = "followImg" src = "extra/chitoge.jpeg">
+					</div>
+					<div>
+						<Strong>Chitoge Kirisaki</Strong> @Tsundere
+					</div>
+					<div class = "space"></div>
+					<button class = "followButton">Follow</button>
+				</div>
+			
+			<div class = "whoToFollow">
+					<div class = "right">
+						<img class = "followImg" src = "extra/rem.jpeg">
+					</div>
+					<div>
+						<Strong>Rem</Strong> @RealRem
+					</div>
+					<div class = "space"></div>
+					<button class = "followButton">Follow</button>
+			</div>
+		</div>
+	 </div>
  </body>
 </html>

@@ -1,0 +1,8 @@
+I enhanced the webpage to look more like the real twitter webpage. 
+- Added additional elements to top navbar with flexbox including search bar, button and links
+- Used custom styled button pulled off twitter page for follow buttons
+- Added box shadows to most components like twitter
+- Modified profile info section to look more like actual twitter: added follow button and added a component for displaying all the users photos and videos
+- To profile stats added the follow button to right of bar
+- Added a recommended followers box on the right of the tweets like real twitter, which displays images and users of recommended folloewrs.
+- Made the tweets component scrollable so it doesn't overflow off the page.

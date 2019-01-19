@@ -29,13 +29,45 @@ a {
 #header {
 	padding: 5px;
 	background-color: white;
-	
+	display: flex;
+	align-items: center;
+	height: 40px;
+}
+
+#header a {
+	margin-right: 20px;
+	font-weight: bold;
+}
+
+
+/* inspired by twitter button */
+button {
+	float: right;
+	color: #fff;
+	background-color: #5088e9;
+	border-radius: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 6px 16px;
+	cursor: pointer;
+}
+
+#header input {
+	margin-left: auto;
+}
+
+.tweetSearch {
+	margin-right: 10px;
+	height: 20px;
+	width: 160px;
 }
 
 .birdLogo {
 	/* Add properties below */
 	width: 30px;
 	margin-left: 40px;
+	margin-right: 40px;
 }
 
 .bannerPic {
@@ -52,6 +84,8 @@ a {
 #profileStats {
 	padding: 5px;
 	background-color: white;
+	-moz-box-shadow: 0 0 2px 2px #999;
+	-webkit-box-shadow: 0 0 2px 2px #999;
 }
 
 #profileStats ul {
@@ -74,7 +108,14 @@ a {
 	display: inline-block;
 		
 }
-
+#profileStats button{
+	margin: 6px 0;
+	background-color: white;
+	border-color: black;
+	color: black;
+	width: 150px;
+	overflow: auto;
+}
 .profileStatsNumber {
 	display: block;
 	
@@ -94,9 +135,33 @@ a {
 	margin: 20px 0 0 50px;
 	width: 300px;
 	min-height: 300px;
+	-moz-box-shadow: 0 2px 2px 0 #999;
+	-webkit-box-shadow: 0 2px 2px 0 #999;
 }
 
+.profileInfoButton {
+	width: 100%;
+	background-color: black;
+	color: white;
+	margin-bottom: 10px;
+}
 
+.info {
+	font-weight: lighter;
+	margin-bottom: 5px;
+}
+
+.infoPhotos {
+	font-weight: lighter;
+	margin-bottom: 5px;
+}
+
+.infoPhotos img {
+	position: relative;
+	width: 30%;
+	height: 99px;
+	cursor: pointer;
+}
 /*** Timeline styles below ***/
 
 #timeline {
@@ -104,11 +169,20 @@ a {
 	background-color: white;
 
 	/* Add properties below */
-	float: right;
+	float: left;
+	width: 600px;
+	margin: 20px 0 0 45px;
+	-moz-box-shadow: 0 2px 2px 0 #999;
+	-webkit-box-shadow: 0 2px 2px 0 #999;
+	
 }
-
+.scroll {
+	overflow-y: scroll;
+	height: 700px;
+}
 .timelineHeader {
 	border-bottom: 1px solid grey;
+
 }
 
 .timelineHeader ul {
@@ -122,7 +196,7 @@ a {
 	font-weight: bold;
 
 	/* Add properties below */
-	
+	display: inline-block;
 
 }
 
@@ -133,49 +207,105 @@ a {
 	background-color: white;
 	
 	/* Add properties below */
-
+	min-height: 100px;
+	overflow: auto;
+	border-bottom: 1px solid grey;
 }
 
 /* For the div that holds the tweet icon */
 .tweetIconContainer {
 
 	/* Add properties below */
-
+	width: 80px;
+	float: left;
 }
 
 .tweetIcon {
 
 	/* Add properties below */
-
+	height: 60px;
+	width: 60px;
+	margin: 10px 10px 0 10px;
+	border-radius: 50%;
 }
 
 .tweetContent {
 	margin: 0px;
 
 	/* Add properties below */
-
+	width: 520px;
+	margin-top: 20px;
+	float: left;
 }
+
 
 /* For pictures inside tweets (like the Robarts pic) */
 .tweetContentPicture {
 	/* Add properties below */
-	
+	max-width: 500px;
+	margin: 10px 0;
 }
 
 
 /* Style the big profile picture circle here. */
 #bigProfilePicCircle {
 	/* Add properties below */
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: 230px 0 0 100px;
+	border: 1.5px solid white;
 
 }
 
+.extra {
+	margin: 0 50px 0 40px;
+	float: left;
+}
 
+.extraBox {
+	padding: 15px 10px;
+	background-color: white;
+	margin-top: 20px;
+	width: 320px;
+	-moz-box-shadow: 0 2px 2px 0 #999;
+	-webkit-box-shadow: 0 2px 2px 0 #999;
+	overflow: auto;
+}
+
+.whoToFollow {
+	padding: 5px 5px;
+	border-bottom: 0.5px solid gray;
+	min-height: 80px;
+}
+
+.followImg {
+	float: left;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.followButton { 
+	height: 35px;
+	background-color: white;
+	border-color: black;
+	color: black;
+	width: 100px;
+	overflow: auto;	
+	float: none;
+}
 /** Some font color classes for you to use. **/
 .grey {
 	color: grey;
+	margin-bottom: 5px;
 }
 
-
+.space {
+	height: 10px;
+}
 .hashtag {
 	color: #5088e9;
 }
