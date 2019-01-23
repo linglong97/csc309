@@ -169,11 +169,12 @@ button {
 	background-color: white;
 
 	/* Add properties below */
-	float: left;
+	
 	width: 600px;
-	margin: 20px 0 0 45px;
+	margin: 20px 0 0 20px;
 	-moz-box-shadow: 0 2px 2px 0 #999;
 	-webkit-box-shadow: 0 2px 2px 0 #999;
+	float: left;
 	
 }
 .scroll {
@@ -260,7 +261,7 @@ button {
 }
 
 .extra {
-	margin: 0 50px 0 40px;
+	margin-left: 20px;
 	float: left;
 }
 
