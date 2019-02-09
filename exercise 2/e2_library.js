@@ -103,10 +103,13 @@ function addNewBookToBookList(e) {
 	e.preventDefault();
 
 	// Add book book to global array
-
-
+	let newBookGenre = document.getElementById("newBookGenre").value;
+	let newBookName =  document.getElementById("newBookName").value;
+	let newBookAuthor =  document.getElementById("newBookAuthor").value;
 	// Call addBookToLibraryTable properly to add book to the DOM
-	
+	let newBook = new Book(newBookName, newBookAuthor, newBookGenre);
+	libraryBooks.push(newBook);
+	addBookToLibraryTable(newBook);
 }
 
 // Changes book patron information, and calls 
@@ -145,10 +148,11 @@ function addNewPatron(e) {
 	e.preventDefault();
 
 	// Add a new patron to global array
-
-
+	let patronName = document.getElementById("newPatronName");
+	let patron = new Patron(patronName);
+	patrons.push(patron);
 	// Call addNewPatronEntry() to add patron to the DOM
-
+	addNewPatronEntry(patron);
 }
 
 // Gets book info and then displays
@@ -158,7 +162,14 @@ function getBookInfo(e) {
 	// Get correct book
 
 	// Call displayBookInfo()	
-
+	let id = document.getElementById("bookInfoId").value
+	if (isNaN(id)){
+		return
+	}
+	if (id <= numberOfBooks - 1) {
+		console.log(libraryBooks[id]);
+		displayBookInfo(libraryBooks[id]);
+	}
 }
 
 
@@ -168,14 +179,27 @@ function getBookInfo(e) {
 // Adds a book to the library table.
 function addBookToLibraryTable(book) {
 	// Add code here
+	let tableRef = document.getElementById("bookTable").getElementsByTagName('tbody')[0];
+	// kinda clunky
+	let id = "<td>" + numberOfBooks + "</td>";
+	let title = "<td>" + book.title + "</td>";
+	//todo
+	let cardNumber = "<td></td>";
 
+	tableRef.insertRow(tableRef.rows.length).innerHTML = "<tr>"+ id + title + cardNumber + "</tr>";
 }
 
 
 // Displays deatiled info on the book in the Book Info Section
 function displayBookInfo(book) {
 	// Add code here
-
+	let section = document.getElementById("bookInfo");
+	let id = "<p>Book Id: <span>" + book.bookId + "</span>";
+	let title = "<p>Title: <span>" + book.title + "</span>";
+	let author = "<p>Author: <span>" + book.author + "</span>";
+	let genre = "<p>Genre: <span>" + book.genre + "</span>";
+	let loaned = "<p>Currently loaned out to: <span>" + (book.patron ? book.patron : "N/A")  + "</span>";
+	section.innerHTML = id + title + author + genre + loaned;
 }
 
 // Adds a book to a patron's book list with a status of 'Within due date'. 
