@@ -204,7 +204,7 @@ function addBookToLibraryTable(book) {
 	let tableRef = document.getElementById("bookTable").getElementsByTagName('tbody')[0];
 	// kinda clunky
 	let id = "<td>" + numberOfBooks + "</td>";
-	let title = "<td>" + book.title + "</td>";
+	let title = "<td><strong>" + book.title + "<strong></td>";
 	//todo
 	let cardNumber = "<td></td>";
 
@@ -246,6 +246,15 @@ function addBookToPatronLoans(book) {
 	let returns = "<td><button class='return'>return</button></td>";
 	let content = id + title + status + returns;
 	tableRef.insertRow(tableRef.rows.length).innerHTML = "<tr>"+content+"</tr>";
+
+	let tableTop = document.getElementById("bookTable");
+	let books = tableTop.children[0].children;
+	for (let i = 0; i < books.length; i++){
+		if (parseInt(books[i].children[0].innerHTML.trim()) == book.bookId ){
+			books[i].children[2].innerHTML =  book.patron.cardNumber;
+			break
+		}
+	}
 }
 
 // Adds a new patron with no books in their table to the DOM, including name, card number,
