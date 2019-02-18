@@ -267,11 +267,12 @@ function loanBookToPatron(e) {
 	if (checkBookInLibrary(id)) {
 		for (let i = 0; i < libraryBooks.length; i++){
 			if (libraryBooks[i].bookId == id){
-				currBook = libraryBooks[id];
+				currBook = libraryBooks[i];
 				if (currBook.patron != null){
 					alert("This book is already checked out!")
 					return
 				}
+				break
 			}
 		}
 		
@@ -294,7 +295,7 @@ function loanBookToPatron(e) {
 		alert("This card doesn't belong to anyone in the system!")
 		return
 	}
-	console.log(currPatron, currBook)
+
 	// Add patron to the book's patron property
 	currBook.patron = currPatron;
 
