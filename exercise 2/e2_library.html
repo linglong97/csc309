@@ -27,8 +27,11 @@
 	 				Title
 	 			</th>
 	 			<th>
-	 				Patron card number (if loaned out)
-	 			</th>
+	 				Patron card number (if loaned out) &nbsp;
+				 </th>
+				 <th>
+					Remove book from system &nbsp;
+				</th>
 	 		</tr>
 	 		<tr>
 	 			<td>
@@ -39,7 +42,10 @@
 	 			</td>
 	 			<td>
 	 				0
-	 			</td>
+				 </td>
+				 <td>
+					<button class='deleteBook'>Delete Book</button>
+				</td>
 	 		</tr>
 	 		<tr>
 	 		 	<td>
@@ -50,7 +56,10 @@
 	 			</td>
 	 			<td>
 	 				
-	 			</td>
+				 </td>
+				 <td>
+					<button class='deleteBook'>Delete Book</button>
+				</td>
 	 		</tr>
 	 		<tr>
 	 			<td>
@@ -61,7 +70,10 @@
 	 			</td>
 	 			<td>
 	 				
-	 			</td>
+				 </td>
+				 <td>
+					<button class='deleteBook'>Delete Book</button>
+				</td>
 	 		</tr>
  		</tbody>
  	</table>
@@ -97,8 +109,12 @@
  	<form id='patronAddForm'>
  		<input id='newPatronName' type="text" name="patronName" placeholder="Patron name">
  		<input type="submit" value="Add Patron">
- 	</form>
-
+	 </form>
+	 <h3>Delete an existing Patron</h3>
+	 <form id='patronDeleteForm'>
+		<input id='deleteName' type="text" name="patronName" placeholder="Patron Card Number">
+		<input type="submit" value="Delete Patron">
+	</form>
  	<div id=patrons>
 	 	<div class='patron'>
 	 		<p>Name: <span class='bold'>Jim John</span></p>

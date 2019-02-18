@@ -1,0 +1,14 @@
+- The main enhancements I made were the added functionality of being able to delete entries from the existing books,
+as well as modify the existing patrons data.
+- By adding a delete button to the side of the books table, you can click to delete the book from the repository.
+- This will delete it from the table, our libraryBooks array, and will be removed from any patron's library books if it is 
+currently borrowed by someone.
+- If the book is currently displaying the info, the info is also deleted from the book info section.
+- Because we aren't allowed to modify the classes, it's not possible to rearrange the bookIds so that they're in order, so now bookIds increase but might have gaps, i.e. book 1,3,4 exist but books 0,2 don't exist
+- As such, error checking was modified for each of the forms -> cannot try to loan a book that doesn't exist in our system, or search for the info. Overall error checking was added for every form -> typecasting as well as making sure it's valid, i.e. book not borrowed, book in the system, patron in the system
+- Added a delete form above the patrons chart, allows you to search for a patron based on id number(essentially card number)
+- By clicking will delete the patron and automatically return all of the books that they have currently borrowed. 
+- Features are very similar to the changes with deleting a book, returning the book means that it won't show up in the books in library circulation as loaned out, and you won't be able to access this patron/their info/borrow books in the future.
+- Our library allows for duplicate book names because real libraries have duplicate books
+- Overall the functions were modified since we can't keep just iterating over patrons/librarbooks since we delete elements from those.
+- The modifications simulate a real library -> can remove books from system, can delete customers. In future add support to modify elements not just delete.
